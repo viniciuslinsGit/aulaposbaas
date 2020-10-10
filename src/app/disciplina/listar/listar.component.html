@@ -1,0 +1,29 @@
+<div>
+    <h1>
+        Listar Disciplinas
+    </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-striped mb-20">
+                    <thead class="thead-color">
+                        <tr class="d-flex">
+                            <th class="col-4">Nome</th>
+                            <th class="col-4">Professor</th>
+                            <th class="col-2">Ano</th>
+                            <th class="col-2">Opções</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="d-flex" *ngFor="let disciplina of listaDisciplinas">
+                            <td class="col-4">{{ disciplina.nome }}</td>
+                            <td class="col-4">{{ disciplina.professor }}</td>
+                            <td class="col-2">{{ disciplina.ano }}</td>
+                            <td class="col-2"><button class="btn btn-danger" (click)="deletar(disciplina)" >Deletar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

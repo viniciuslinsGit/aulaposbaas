@@ -1,0 +1,39 @@
+<div>
+    <h1>
+      Cadastrar Disciplinas
+    </h1>
+  
+    <div class="container">
+      <form class="form-group" (submit)="handleSubmit()">
+  
+        <div class="row">
+          <div class="col-12">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" placeholder="Nome" id="nome" required
+                  autoFocus (change)="handleNomeChange($event)"/>
+          </div>
+        </div>
+        <br/>
+  
+        <div class="row">
+            <div class="col-12">
+            <label for="professor">Professor</label>
+            <input type="text" class="form-control" placeholder="Professor" id="professor" required
+                  (change)="handleProfessorChange($event)"/>
+          </div>  
+        </div>  
+        <br/> 
+  
+        <div class="row">
+            <div class="col-12">
+              <label for="ano">Ano</label>
+              <input type="text" class="form-control" placeholder="Ano" id="ano" required
+                  autoFocus (change)="handleAnoChange($event)" (keypress)="keyPress($event)" maxlength="4"/>
+            </div> 
+          </div>
+          <br/>
+          <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
+      </form>
+    </div>
+  
+  </div>
